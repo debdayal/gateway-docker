@@ -31,7 +31,7 @@ public class UserController {
 	@Value("${app.service.url.user-service}")
 	private String userServiceUrl;
 	
-	@HystrixCommand(fallbackMethod="getUsersFallback")
+	//@HystrixCommand(fallbackMethod="getUsersFallback")
 	@RequestMapping(method = RequestMethod.GET)
     public Collection<User> findAll() {
 		ParameterizedTypeReference<Collection<User>> ptr = new ParameterizedTypeReference<Collection<User>>(){};
